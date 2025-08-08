@@ -19,7 +19,7 @@ RUN apt-get install -y \
       ros-humble-micro-ros-agent
 
 RUN . /opt/ros/humble/setup.sh && \
-      colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release
+      colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF
 
 COPY ./entrypoint.sh /root/entrypoint.sh
 RUN chmod +x /root/entrypoint.sh
