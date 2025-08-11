@@ -6,9 +6,9 @@ WORKDIR /root/ros_ws
 RUN git clone -b humble-leo1.9 https://github.com/LeoRover/leo_robot-ros2.git src/leo_robot-ros2
 RUN git clone https://github.com/LeoRover/leo_common-ros2.git src/leo_common-ros2
 
-RUN curl -sSL http://files.fictionlab.pl/repo/fictionlab.gpg -o /usr/share/keyrings/fictionlab-archive-keyring.gpg
+RUN curl -sSL https://archive.fictionlab.pl/fictionlab.gpg -o /usr/share/keyrings/fictionlab-archive-keyring.gpg
 RUN echo \
-      "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/fictionlab-archive-keyring.gpg] http://files.fictionlab.pl/repo \
+      "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/fictionlab-archive-keyring.gpg] https://archive.fictionlab.pl \
       $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | \
       tee /etc/apt/sources.list.d/fictionlab.list > /dev/null
 
