@@ -7,4 +7,4 @@ source install/setup.bash
 
 export PATH="/usr/lib/ros:$PATH"
 
-"$@"
+exec "$@"
