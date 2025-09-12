@@ -13,7 +13,7 @@ RUN apt-get update \
       && pip3 install meson
 
 # Build and install libcamera
-RUN git clone -b v0.5.2+rpt20250903 https://github.com/raspberrypi/libcamera.git \
+RUN git clone -b v0.5.0+rpt20250429 https://github.com/raspberrypi/libcamera.git \
       && cd libcamera \
       && meson setup build --buildtype=release \
       -Dpipelines=rpi/vc4,rpi/pisp \
