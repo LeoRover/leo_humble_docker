@@ -32,8 +32,7 @@ RUN git clone -b v0.5.0+rpt20250429 https://github.com/raspberrypi/libcamera.git
 RUN mkdir -p /root/ros_ws/src
 WORKDIR /root/ros_ws
 
-RUN git clone -b humble-leo1.9 https://github.com/LeoRover/leo_robot-ros2.git src/leo_robot-ros2
-RUN git clone -b humble-leo1.9 https://github.com/LeoRover/leo_common-ros2.git src/leo_common-ros2
+RUN git clone -b humble-backports https://github.com/LeoRover/leo_robot-ros2.git src/leo_robot-ros2
 RUN git clone -b 0.3.0 https://github.com/LeoRover/leo_camera_ros.git src/leo_camera_ros
 
 RUN apt-get update && rosdep update && \
